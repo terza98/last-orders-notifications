@@ -31,6 +31,12 @@ function App() {
 		return Math.round(Math.random() * 10);
 	};
 
+	const isPlural = number => {
+		if (number > 1) return 's';
+		else return '';
+	};
+
+	const randNumber = calcRandomNumber();
 	return (
 		<div className="App">
 			<div id="popup">
@@ -50,7 +56,9 @@ function App() {
 									</p>
 									<p
 										style={{ color: 'red' }}
-									>{`${calcRandomNumber()} Minute Ago`}</p>
+									>{`${randNumber} Minute${isPlural(
+										randNumber,
+									)} Ago`}</p>
 								</div>
 							</div>
 						),
