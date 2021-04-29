@@ -55,9 +55,7 @@ function App() {
                     {`Purchased ${order.product_name}`}
                   </p>
                   {randNumber === 0 ? (
-                    <p
-                      style={{ color: "red" }}
-                    >{`${randNumber} Seconds Ago`}</p>
+                    <p style={{ color: "red" }}>{`Seconds Ago`}</p>
                   ) : (
                     <p
                       style={{ color: "red" }}
