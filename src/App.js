@@ -54,9 +54,15 @@ function App() {
                   <p className="orderSubtitle">
                     {`Purchased ${order.product_name}`}
                   </p>
-                  <p style={{ color: "red" }}>{`${randNumber} Second${isPlural(
-                    randNumber
-                  )} Ago`}</p>
+                  {randNumber === 0 ? (
+                    <p
+                      style={{ color: "red" }}
+                    >{`${randNumber} Seconds Ago`}</p>
+                  ) : (
+                    <p
+                      style={{ color: "red" }}
+                    >{`${randNumber} Minute${isPlural(randNumber)} Ago`}</p>
+                  )}
                 </div>
               </div>
             )
